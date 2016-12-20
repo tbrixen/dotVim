@@ -1,3 +1,4 @@
+" Vundle ---------------------- {{{
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -18,8 +19,8 @@ Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
-
+" }}}
+filetype plugin indent on    " Automatically detect file types
 
 set showcmd               " Display incomplete commands
 set number
@@ -65,7 +66,6 @@ nnoremap <Leader>bb :ls<CR>:buffer<Space>
 
 colorscheme molokai
 
-filetype plugin on
 syntax enable
 if has("gui_running")
   set lines=56
