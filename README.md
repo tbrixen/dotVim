@@ -26,7 +26,7 @@ To use Git and Curl on windows take a look at [Vundle for Windows](https://githu
 
 Clone this repository
 ```
-$ git clone https://github.com/tbrixen/dotVim.git ~/vimfiles
+$ git clone https://github.com/tbrixen/dotVim.git %HOME%/vimfiles
 ```
 
 Add following to `%HOME%/_vimrc`
