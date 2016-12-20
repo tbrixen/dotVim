@@ -29,14 +29,14 @@ Clone this repository
 $ git clone https://github.com/tbrixen/dotVim.git ~/vimfiles
 ```
 
-Add following to `$VIMRUNTIME/_vimrc`
+Add following to `%HOME%/_vimrc`
 ```
-source ~/vimfiles/vimrc
+source $HOME/vimfiles/vimrc
 ```
 
 Install `Vundle`
 ```
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
+$ git clone https://github.com/VundleVim/Vundle.vim.git %HOME%/vimfiles/bundle/Vundle.vim
 ```
 
 Open VIM and call
