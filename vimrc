@@ -4,7 +4,6 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 " Vundle for windows: Follow https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
-" set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 call vundle#begin()
 

@@ -3,24 +3,22 @@
 
 Clone this repository
 ```
-$ git clone https://github.com/tbrixen/dotVim.git ~/.vim
+$ git clone https://github.com/tbrixen/dotVim.git ~/vimfiles
 ```
 
-Create symlink
+Add the following to `$VIMRUNTIME/.vimrc`
 ```
-$ ln -sfn ~/.vim/vimrc .vimrc
+source ~/vimfiles/vimrc
 ```
 
 Install `Vundle`
-
 ```
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
 ```
 
-Install download plugins (It complains about not being able to find the theme. This is ok)
-
+Open VIM and call
 ```
-$ vim +PluginInstall +qall
+:PluginInstall
 ```
 
 ## For Windows (not tested)
@@ -28,22 +26,20 @@ To use Git and Curl on windows take a look at [Vundle for Windows](https://githu
 
 Clone this repository
 ```
-$ git clone https://github.com/tbrixen/dotVim.git ~/.vim
+$ git clone https://github.com/tbrixen/dotVim.git ~/vimfiles
 ```
 
 Add following to `$VIMRUNTIME/_vimrc`
 ```
-source ~/.vim/vimrc
+source ~/vimfiles/vimrc
 ```
 
 Install `Vundle`
-
 ```
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/vimfiles/bundle/Vundle.vim
 ```
 
-Install download plugins (It complains about not being able to find the theme. This is ok)
-
+Open VIM and call
 ```
-$ vim +PluginInstall +qall
+:PluginInstall
 ```
