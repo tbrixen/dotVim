@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-repeat'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 
@@ -32,12 +33,11 @@ set cursorline
 set ttyfast
 set laststatus=2
 set relativenumber
-set undofile
 set ruler                 " Displayer row and col
 
 " Search
 set ignorecase          " Ignore case 
-set smartcase           " if i do search for somethin uppercase, use case
+set smartcase           " if I do search for somethin uppercase, use case
 set hlsearch            " highlight searches
 set incsearch           " do incremental searching
 set showmatch           " jump to matches when entering regexp
@@ -67,12 +67,15 @@ colorscheme molokai
 
 syntax enable
 if has("gui_running")
-  set lines=56
-  set guioptions=aeci
-else
-  set t_Co=256
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
 endif
-set backspace=indent,eol,start
+" set backspace=indent,eol,start
 set ttimeout
 set ttimeoutlen=50
 set laststatus=2
