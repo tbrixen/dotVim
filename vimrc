@@ -28,7 +28,6 @@ set showmode
 set hidden                " See :h hidden
 set wildmenu
 set wildmode=list:longest
-set visualbell
 set cursorline
 set ttyfast
 set laststatus=2
