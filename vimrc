@@ -48,6 +48,10 @@ nnoremap <CR> :noh<CR><CR>"
 nnoremap <tab> %
 vnoremap <tab> %
 
+" Make space the leader
+map <SPACE> <leader>
+
+noremap <C-c> <Esc>
 inoremap jk <Esc>
 nnoremap <leader>w <Esc>:w<CR>
 
@@ -96,8 +100,6 @@ set expandtab       " Expand TABs to space
 
 set colorcolumn=80
 
-" Rebind C-c to Esc
-noremap <C-c> <Esc>
 
 
 " Sets in-line spellchecking
