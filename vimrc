@@ -16,6 +16,9 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-repeat'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'w0rp/ale'
+Plugin 'Yggdroot/indentLine'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,6 +36,8 @@ set ttyfast
 set laststatus=2
 set relativenumber
 set ruler                 " Displayer row and col
+
+set encoding=utf-8
 
 " Search
 set ignorecase          " Ignore case 
@@ -136,4 +141,22 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+" }}}
+
+" YouCompleteMe ---------------------- {{{
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" }}}
+
+" Syntastic ---------------------- {{{
+let g:syntastic_python_checkers = ['pylint']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 " }}}
