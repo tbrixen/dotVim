@@ -18,7 +18,8 @@ Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
 " To install YouCompleteMe in windows see https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows
 Plugin 'Valloric/YouCompleteMe'
-
+Plugin 'w0rp/ale'
+Plugin 'Yggdroot/indentLine'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " }}}
@@ -35,6 +36,8 @@ set ttyfast
 set laststatus=2
 set relativenumber
 set ruler                 " Displayer row and col
+
+set encoding=utf-8
 
 " Search
 set ignorecase          " Ignore case 
@@ -141,8 +144,10 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
-
-" YouCompleteMe---------------------- {{{
+" YouCompleteMe ---------------------- {{{
 " Only do autocomplete in the following files
 let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1, 'java':1 }
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " }}}
