@@ -16,6 +16,8 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-repeat'
 Plugin 'bling/vim-airline'
 Plugin 'ervandew/supertab'
+" To install YouCompleteMe in windows see https://bitbucket.org/Alexander-Shukaev/vim-youcompleteme-for-windows
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -132,10 +134,15 @@ let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
 " }}}
 
-" Vim-airlien---------------------- {{{
+" Vim-airline---------------------- {{{
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+" }}}
+
+" YouCompleteMe---------------------- {{{
+" Only do autocomplete in the following files
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1, 'java':1 }
 " }}}
