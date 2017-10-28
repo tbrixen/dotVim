@@ -20,6 +20,9 @@ Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'w0rp/ale'
 Plugin 'Yggdroot/indentLine'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'python-mode/python-mode'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 " }}}
@@ -118,7 +121,6 @@ setlocal spell spelllang=en_us
 " setlocal spell spelllang=da
 
 
-
 " Autofold
 augroup filetype_vim
     autocmd!
@@ -150,4 +152,8 @@ let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1, 'java':1 }
 
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" }}}
+
+" PyMode ---------------------- {{{
+let g:pymode_lint = 0
 " }}}
