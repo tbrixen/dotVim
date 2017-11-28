@@ -110,9 +110,9 @@ set expandtab       " Expand TABs to space
 set colorcolumn=80
 
 " Insert time
-" Advanced use: strftime("%Y-%m-%d %a %I:%M %p")
-nmap <F3> i<C-R>=strftime("%I:%M %p")<CR><Esc>
-imap <F3> <C-R>=strftime("%I:%M %p")<CR>
+" Advanced use: strftime("%Y-%m-%d %a %H:%M %p")
+nmap <F3> i<C-R>=strftime("%H:%M %p")<CR><Esc>
+imap <F3> <C-R>=strftime("%H:%M %p")<CR>
 
 
 " Sets in-line spellchecking
