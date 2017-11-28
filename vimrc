@@ -22,6 +22,7 @@ Plugin 'w0rp/ale'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'python-mode/python-mode'
+Plugin 'jjaderberg/vim-ft-asciidoc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
