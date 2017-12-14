@@ -22,6 +22,7 @@ Plugin 'w0rp/ale'
 Plugin 'Yggdroot/indentLine'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'python-mode/python-mode'
+Plugin 'jeetsukumaran/vim-buffergator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -70,9 +71,6 @@ noremap <C-H> :bprev<CR>
 
 nnoremap <silent> gb :bnext<CR>
 nnoremap <silent> gB :bprevious<CR>
-
-" Show buffer list, and accept a buffer name
-nnoremap <Leader>bb :ls<CR>:buffer<Space>
 
 colorscheme molokai
 
@@ -156,4 +154,36 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " PyMode ---------------------- {{{
 let g:pymode_lint = 0
+" }}}
+
+" CtrlP ---------------------- {{{
+let g:ctrlp_working_path_mode = 'r'
+" Easy bindings for its various modes
+nmap <leader>bb :CtrlPBuffer<cr>
+nmap <leader>bm :CtrlPMixed<cr>
+nmap <leader>bs :CtrlPMRU<cr>
+" }}}
+
+" Buffergator ---------------------- {{{
+" Use the right side of the screen
+let g:buffergator_viewport_split_policy = 'R'
+
+" I want my own keymappings...
+let g:buffergator_suppress_keymaps = 1
+
+" Looper buffers
+"let g:buffergator_mru_cycle_loop = 1
+
+" Go to the previous buffer open
+nmap <leader>jj :BuffergatorMruCyclePrev<cr>
+
+" Go to the next buffer open
+nmap <leader>kk :BuffergatorMruCycleNext<cr>
+
+" View the entire list of buffers open
+nmap <leader>bl :BuffergatorOpen<cr>
+
+" Shared bindings from Solution #1 from earlier
+nmap <leader>T :enew<cr>
+nmap <leader>bq :bp <BAR> bd #<cr>
 " }}}
