@@ -23,6 +23,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'python-mode/python-mode'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'jjaderberg/vim-ft-asciidoc'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,6 +107,10 @@ set expandtab       " Expand TABs to space
 
 set colorcolumn=80
 
+" Insert time
+" Advanced use: strftime("%Y-%m-%d %a %H:%M %p")
+nmap <F3> i<C-R>=strftime("%H:%M %p")<CR><Esc>
+imap <F3> <C-R>=strftime("%H:%M %p")<CR>
 
 
 " Sets in-line spellchecking
